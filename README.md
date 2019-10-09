@@ -1,7 +1,23 @@
 # TDD Demo
 
-A repo I'm using to demonstrate TDD technique
+A repo I'm using to demonstrate TDD technique.
 
+My goal is to teach following TDD concepts:
+
+* 3 rules of TDD
+* Red-Green-Refactor 
+* The Single Assert Rule
+* Arrange, Act, Assert Rule
+* Principle: "As tests get more specific, code gets more generic"
+
+## 3 rules of TDD
+
+1. You can’t write any production code until you have first written a failing 
+   unit test.
+2. You can’t write more of a unit test than is sufficient to fail, and not 
+   compiling is failing.
+3. You can’t write more production code than is sufficient to pass the 
+   currently failing unit test.
 
 ## Katas
 
