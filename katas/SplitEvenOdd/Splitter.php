@@ -10,13 +10,12 @@ final class Splitter
      */
     public function split(array $input): array
     {
-        $even = [];
-        $odd = [];
+        $res = [[], []];
 
         foreach ($input as $number) {
-            ($number % 2) ? $odd[] = $number : $even[] = $number;
+            $res[$number % 2][] = $number;
         }
 
-        return [$even, $odd];
+        return $res;
     }
 }
