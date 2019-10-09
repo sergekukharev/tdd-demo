@@ -10,7 +10,9 @@
         }
     ],
     "autoload": {
-
+        "psr-4": {
+            "Sk\\TddDemo\\": "katas/"
+        }
     },
     "require": {
         "phpunit/phpunit": "^8.4"
