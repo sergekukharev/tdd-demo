@@ -24,6 +24,17 @@ My goal is to teach following TDD concepts:
 Apart of 3 simple katas presented in this repo, there is a whole world of 
 katas out there.
 
+## Solutions
+
+You can find my version of the solutions in the 
+[corresponding branch](https://github.com/sergekukharev/tdd-demo/tree/solutions). 
+
+Note that every time you do katas, the solutions would be slightly different. 
+That's the beauty of katas - you keep discovering new ways of solving the 
+same problem.
+
+## Resources
+
 ### Notable katas
 
 * [Roman Numerals](http://codingdojo.org/kata/RomanNumerals/)               💪
@@ -38,8 +49,7 @@ katas out there.
 * [About - Project Euler](https://projecteuler.net/) for math inclined problem.
 * [HackerRank](http://hackerrank.com) for all kinds of problems.
 
-
-## Resources
+### Further study
 
 * 📚 [Test Driven Development: By Example](https://www.goodreads.com/book/show/387190.Test_Driven_Development)
 * 📚 [Clean Code, ch. 9](https://www.goodreads.com/book/show/3735293-clean-code)
