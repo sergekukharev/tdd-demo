@@ -28,6 +28,9 @@ final class GreeterTest extends TestCase
         self::assertEquals('Hello, Sergei!', $this->greeter->greet("\t   \n   Sergei  \n\n \t"));
     }
 
+    /**
+     * @dataProvider provideWeirdNames
+     */
     public function testNormalizesNames(): void
     {
         self::assertEquals(
@@ -36,28 +39,12 @@ final class GreeterTest extends TestCase
         );
     }
 
-
-    public function testCapitalizesSingleNames(): void
+    public function provideWeirdNames(): array
     {
-        self::assertEquals(
-            'Hello, Sergei!',
-            $this->greeter->greet('sergei')
-        );
-    }
-
-    public function testNormalizesSingleNames(): void
-    {
-        self::assertEquals(
-            'Hello, Sergei!',
-            $this->greeter->greet('sERgEi')
-        );
-    }
-
-    public function testNormalizesFullNames(): void
-    {
-        self::assertEquals(
-            'Hello, Sergei Kukhariev!',
-            $this->greeter->greet('sERGEi KUKHARieV')
-        );
+        return [
+            ['sergei'],
+            ['sERgEi'],
+            ['sERGEi KUKHARieV'],
+        ];
     }
 }
