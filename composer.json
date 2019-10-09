@@ -1,0 +1,21 @@
+{
+    "name": "sergekukharev/tdd-demo",
+    "description": "A repo I'm using to demonstrate TDD technique",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergei Kukhariev",
+            "email": "serge.kukharev@gmail.com"
+        }
+    ],
+    "autoload": {
+
+    },
+    "require": {
+        "phpunit/phpunit": "^8.4"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
