@@ -14,11 +14,7 @@ final class Splitter
         $odd = [];
 
         foreach ($input as $number) {
-            if ($number % 2 === 0) {
-                $even[] = $number;
-            } else {
-                $odd[] = $number;
-            }
+            ($number % 2) ? $odd[] = $number : $even[] = $number;
         }
 
         return [$even, $odd];
