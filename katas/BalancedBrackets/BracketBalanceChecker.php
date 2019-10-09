@@ -4,13 +4,18 @@
 namespace Sk\TddDemo\BalancedBrackets;
 
 
+use SplStack;
+
 final class BracketBalanceChecker
 {
+    private const OPENING_BRACKETS = ['[', '('];
+    private const CLOSING_BRACKETS = [']', ')'];
+
     private $stack;
 
     public function __construct()
     {
-        $this->stack = new \SplStack();
+        $this->stack = new SplStack();
     }
 
     public function isValid(string $input): bool
@@ -43,14 +48,14 @@ final class BracketBalanceChecker
         return $this->stack->isEmpty();
     }
 
-    private function isOpeningBracket(string $i): bool
+    private function isOpeningBracket(string $char): bool
     {
-        return $i === '[';
+        return in_array($char, self::OPENING_BRACKETS, true);
     }
 
-    private function isClosingBracket($current): bool
+    private function isClosingBracket($char): bool
     {
-        return $current === ']';
+        return in_array($char, self::CLOSING_BRACKETS, true);
     }
 
     private function isCorrespondingBracket($opening, $closing): bool
@@ -58,6 +63,11 @@ final class BracketBalanceChecker
         if ($closing === ']' && $opening === '[') {
             return true;
         }
+
+        if ($closing === ')' && $opening === '(') {
+            return true;
+        }
+
         return false;
     }
 }

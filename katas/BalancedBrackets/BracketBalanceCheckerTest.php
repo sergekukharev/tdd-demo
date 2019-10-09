@@ -44,4 +44,23 @@ final class BracketBalanceCheckerTest extends TestCase
 
         self::assertTrue($this->checker->isValid($input));
     }
+
+    public function testCanWorkWithParentheses(): void
+    {
+        $input = '(123 + 35) * (1 + 2 * (34 - 17))';
+
+        self::assertTrue($this->checker->isValid($input));
+    }
+
+    public function testCanDetectInvalidParentheses(): void
+    {
+        self::assertFalse($this->checker->isValid('(()'));
+    }
+
+    public function testCanHandleMixedBrackets(): void
+    {
+        $input = '(123 + 35) * [1 + 2 * (34 - 17)]';
+
+        self::assertTrue($this->checker->isValid($input));
+    }
 }
